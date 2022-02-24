@@ -1,0 +1,32 @@
+
+CREATE TABLE `users` (
+`id` INT(11) AUTO_INCREMENT,
+    `login` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `email`    VARCHAR(255) NOT NULL,
+    `privilege` INT(11) NOT NULL,
+    `hash`  VARCHAR(255) NULL,
+    PRIMARY KEY(`id`)
+);
+
+
+
+
+
+INSERT INTO `users` (`login`,`password`,`privilege`,`email`) VALUES 
+('userone','user',1,'userone@mail.ru'), 
+('dmitriFedorov','qwer1',2,'dmitri@mail.ru'),
+('sergeiKoshelev','qwer12',3,'sergei@mail.ru');
+
+
+CREATE TABLE `menu` (
+    `id` INT(11) AUTO_INCREMENT,
+    `title` VARCHAR(50) NOT NULL,
+    `privilege` VARCHAR(50) NOT NULL,
+    PRIMARY KEY(`id`)
+);
+
+
+INSERT INTO `menu` (`title`,`privilege`) VALUES 
+('menu1',',1,2,'),
+('menu2',',1,3,');
